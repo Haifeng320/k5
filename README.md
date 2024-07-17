@@ -1,5 +1,10 @@
 # 倾听者K5刷机教程
 
+说明：
+1. 以下内容请自行测试，如有不足欢迎提交is或pr。
+2. 如果有人有时间，欢迎补充。
+3. 以下带 \[\*\] 的只是思路，并未测试，不确定是否可用，可以删除或补充
+
 ## 基础
 
 ### 进入安卓原生设置
@@ -78,7 +83,7 @@ Select Boot Mode:
 3. 按 *音量+* 移动 `<<==` 到 `[Recovery    Mode]` 前，按 *音量-* 进入
 4. 现在屏幕上会出现躺着的机器人与 `无命令。`
 5. 同时按下 *电源* 与 *音量-* 不放， 再按下 *音量+*
-6. 不出意外的话就进入了rec，*电源* 进入、 *音量-* 下移、 *音量+* 上移，可以愉快地用 `adb sideload [zip线刷包名]` 或emmc上的包卡刷了（magisk只能刷25.*或更早版本，详见[v26.0更新记录第一条](https://github.com/topjohnwu/Magisk/releases/tag/v26.0)）
+6. 不出意外的话就进入了rec，*电源* 进入、 *音量-* 下移、 *音量+* 上移，\[\*可以愉快地用 `adb sideload [zip线刷包名]` 或emmc上的包卡刷了（magisk只能刷25.*或更早版本，详见[v26.0更新记录第一条](https://github.com/topjohnwu/Magisk/releases/tag/v26.0)）\]
 
 
 ### 线刷（fastboot）
@@ -86,7 +91,7 @@ Select Boot Mode:
 2. 与[上面1~3](#卡刷)类似，选`[Fastboot    Mode]`；也可以用 `adb reboot bootloader`
 3. 执行 `fastboot oem unlock`
 4. 按屏幕上的提示操作，**注意：该操作会清除emmc，但不会清除tf卡；由于tf卡挂载在/sdcard，所以一般文件（下载或用电脑拷的）都在tf卡上，而应用配置（如听单等）在emmc上，请自行备份**
-5. 解完bl锁后再次进入fastboot，即可用`fastboot [分区名] [img镜像文件名]`线刷
+5. \[\*解完bl锁后再次进入fastboot，即可用`fastboot [分区名] [img镜像文件名]`线刷\]
 
 ### 工厂模式（假rec？）
 1. 长按 *音量-* 和 *电源* ，开机即可
